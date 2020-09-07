@@ -1,11 +1,12 @@
 import React from 'react';
 
 import classes from './App.module.scss';
+import Layout from './containers/Layout/Layout';
 
 function App() {
   return (
     <div className={classes.App}>
-      2048
+      <Layout />
     </div>
   );
 }
