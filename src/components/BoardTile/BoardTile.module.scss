@@ -1,3 +1,17 @@
-.BoardTile {
-  
+.Cell {  
+  width: var(--cell-size);
+  height: var(--cell-size);
+  font-size: 3rem;
+  // line-height: 1;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--board-tile-color);
+  border-radius: 4px  ;
+
+  &:not(:last-child) {
+    margin-right: var(--cell-space);
+  }
 }

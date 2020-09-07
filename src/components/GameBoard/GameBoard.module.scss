@@ -1,3 +1,18 @@
 .GameBoard {
-  
+  background-color: var(--board-color);
+  padding: var(--cell-space);
+  border-radius: 6px;
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+
+  .Row {
+    // background: silver;
+    height: var(--cell-size);
+
+    &:not(:last-child) {
+      margin-bottom: var(--cell-space);
+    }
+  }
 }

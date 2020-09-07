@@ -10,7 +10,6 @@ export default class Layout extends Component {
     
     return (
       <div className={classes.GameLayout}>
-        Game layout
         <Game />
       </div>
     );
