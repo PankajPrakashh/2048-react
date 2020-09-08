@@ -36,6 +36,8 @@
   }
 
   color: #f9f6f2;
+  background: #edc22e;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
 
   &.Tile2,
   &.Tile4 {
@@ -64,6 +66,15 @@
 
   &.Tile64 {
     background: #f65e3b;
+  }
+
+  &.Tile2,
+  &.Tile4,
+  &.Tile8,
+  &.Tile16,
+  &.Tile32,
+  &.Tile64 {
+    box-shadow: none;
   }
 
   &.Tile128 {
