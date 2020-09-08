@@ -1,0 +1,30 @@
+.Tile {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border-radius: var(--cell-border-radius);
+  background-color: #eee4da;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.1s ease-in-out;
+  font-size: 4rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+
+  @for $i from 1 to 5 {
+    
+    @for $j from 1 to 5 {
+      
+      $row: $i - 1;
+      $col: $j - 1;
+
+      &.TilePosition#{$i}#{$j} {
+        $x: calc(var(--cell-space) * #{$col} + var(--cell-size) * #{$col});
+        $y: calc(var(--cell-space) * #{$row} + var(--cell-size) * #{$row});
+        transform: translate($x, $y);
+      }
+    }
+  }
+}

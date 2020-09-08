@@ -1,5 +1,6 @@
 import React from 'react';
 
+import TileContainer from '../../containers/TileContainer/TileContainer';
 import BoardTile from '../BoardTile/BoardTile';
 import classes from './GameBoard.module.scss';
 
@@ -24,10 +25,14 @@ const GameBoard = (props) => {
   }
 
   return (
-    <div className={classes.GameBoard}>
-
-      { boardTilesTemplate }
+    <div className={classes.BoardContainer}>
+      <div className={classes.GameBoard}>
+  
+        { boardTilesTemplate }
+        
+      </div>
       
+      <TileContainer />
     </div>
   );
 };

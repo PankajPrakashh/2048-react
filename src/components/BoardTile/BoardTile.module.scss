@@ -9,7 +9,7 @@
   align-items: center;
 
   background-color: var(--board-tile-color);
-  border-radius: 4px  ;
+  border-radius: var(--cell-border-radius);
 
   &:not(:last-child) {
     margin-right: var(--cell-space);

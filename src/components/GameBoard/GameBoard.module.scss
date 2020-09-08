@@ -1,7 +1,12 @@
-.GameBoard {
+.BoardContainer {
   background-color: var(--board-color);
   padding: var(--cell-space);
-  border-radius: 6px;
+  border-radius: calc(var(--cell-border-radius) + 6px);
+
+  position: relative;
+}
+
+.GameBoard {
 
   // display: flex;
   // align-items: center;

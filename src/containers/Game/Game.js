@@ -7,7 +7,7 @@ export default class Game extends Component {
 
   state = {
     // Empty board state
-    board: [[null, null, null, null, ], [null, null, null, null, ], [null, null, null, null, ], [null, null, null, null, ]],
+    board: [[null, null, null, null, ], [null, null, null, null, ], [null, null, null, null, ], [2, 2, null, null, ]],
   };
 
   render() {

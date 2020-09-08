@@ -1,0 +1,9 @@
+.TileContainer {
+  position: absolute;
+  left: var(--cell-space);
+  right: var(--cell-space);
+  top: var(--cell-space);
+  bottom: var(--cell-space);
+
+  z-index: 2;
+}
