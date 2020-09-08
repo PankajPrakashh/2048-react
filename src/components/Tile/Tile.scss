@@ -2,16 +2,21 @@
   width: var(--cell-size);
   height: var(--cell-size);
   border-radius: var(--cell-border-radius);
-  background-color: #eee4da;
-
+  
   display: flex;
+  position: absolute;
   justify-content: center;
   align-items: center;
-
+  
   transition: transform 0.1s ease-in-out;
-  font-size: 4rem;
+  font-size: 60px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.7);
+
+  pointer-events: none;
+  touch-action: none;
+  &::selection {
+    background-color: transparent;
+  }
 
   @for $i from 1 to 5 {
     
@@ -24,7 +29,84 @@
         $x: calc(var(--cell-space) * #{$col} + var(--cell-size) * #{$col});
         $y: calc(var(--cell-space) * #{$row} + var(--cell-size) * #{$row});
         transform: translate($x, $y);
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
       }
     }
+  }
+
+  color: #f9f6f2;
+
+  &.Tile2,
+  &.Tile4 {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &.Tile2 {
+    background-color: #eee4da;
+  }
+
+  &.Tile4 {
+    background: #f5c194;
+  }
+
+  &.Tile8 {
+    background: #f2b179;
+  }
+
+  &.Tile16 {
+    background: #f7896f;
+  }
+
+  &.Tile32 {
+    background: #f67c5f;
+  }
+
+  &.Tile64 {
+    background: #f65e3b;
+  }
+
+  &.Tile128 {
+    background: #edcf72;
+    box-shadow: 0 0 30px 10px rgba(243,215,116,.2381), inset 0 0 0 1px rgba(255,255,255,.14286);
+  }
+
+  &.Tile256 {
+    background: #edcc61;
+    box-shadow: 0 0 30px 10px rgba(243,215,116,.31746), inset 0 0 0 1px rgba(255,255,255,.19048);
+  }
+
+  &.Tile512 {
+    background: #edc850;
+    box-shadow: 0 0 30px 10px rgba(243,215,116,.39683), inset 0 0 0 1px rgba(255,255,255,.2381);
+  }
+
+  &.Tile128,
+  &.Tile256,
+  &.Tile512 {
+    font-size: 50px;
+  }
+
+  &.Tile1024 {
+    background: #edc53f;
+    box-shadow: 0 0 30px 10px rgba(243,215,116,.47619), inset 0 0 0 1px rgba(255,255,255,.28571);
+  }
+
+  &.Tile2048 {
+    background: #edc22e;
+    box-shadow: 0 0 30px 10px rgba(243,215,116,.55556), inset 0 0 0 1px rgba(255,255,255,.33333);
+  }
+
+  &.Tile1024,
+  &.Tile2048,
+  &.Tile4096,
+  &.Tile8192 {
+    font-size: 40px;
+  }
+
+  &.Tile16384,
+  &.Tile32768,
+  &.Tile65536 {
+    font-size: 35px;
   }
 }

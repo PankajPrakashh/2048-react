@@ -4,8 +4,10 @@ import React from 'react';
 
 const Tile = (props) => {
 
+  const classList = ['Tile', `Tile${props.value}`, `TilePosition${props.row}${props.col}`];
+
   return (
-    <div className="Tile TilePosition11">2</div>
+    <div className={classList.join(' ')}>{props.value}</div>
   );
 };
 
